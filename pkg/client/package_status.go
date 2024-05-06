@@ -28,6 +28,8 @@ func GetStatus(status *v1alpha1.PackageStatus) *PackageStatus {
 func GetStatusOrPending(status *v1alpha1.PackageStatus) *PackageStatus {
 	if status := GetStatus(status); status != nil {
 		return status
+	} else if status.Reason == condition.Uninstalling {
+		return NewUninsatllingStatus()
 	} else {
 		return NewPendingStatus()
 	}
@@ -43,4 +45,8 @@ func newPackageStatus(cnd *metav1.Condition) *PackageStatus {
 
 func NewPendingStatus() *PackageStatus {
 	return &PackageStatus{Status: "Pending"}
+}
+
+func NewUninsatllingStatus() *PackageStatus {
+	return &PackageStatus{Status: "Uninstalling"}
 }

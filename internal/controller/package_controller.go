@@ -89,7 +89,7 @@ func (r *PackageReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ct
 
 	if !pkg.DeletionTimestamp.IsZero() {
 		changed, err := conditions.SetUnknownAndUpdate(ctx, r.Client, &pkg, &pkg.Status.Conditions,
-			condition.Pending, "Package is being deleted")
+			condition.Uninstalling, "Package is being deleted")
 		if changed {
 			telemetry.ForOperator().ReportDelete(&pkg)
 		}

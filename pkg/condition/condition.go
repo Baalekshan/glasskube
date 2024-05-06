@@ -20,4 +20,5 @@ const (
 	InstallationSucceeded     Reason = "InstallationSucceeded"
 	InstallationFailed        Reason = "InstallationFailed"
 	Pending                   Reason = "Pending"
+	Uninstalling 			  Reason = "Uninstalling"
 )
