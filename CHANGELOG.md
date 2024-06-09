@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/Baalekshan/glasskube/compare/v0.2.0...v0.2.1) (2024-06-09)
+
+
+### Bug Fixes
+
+* update uninstall.go ([c7067e0](https://github.com/Baalekshan/glasskube/commit/c7067e092ba35d1a406f1a7db289f69a75fa375f))
+
 ## [0.2.0](https://github.com/Baalekshan/glasskube/compare/v0.3.0...v0.2.0) (2024-05-06)
 
 
