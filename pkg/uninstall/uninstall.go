@@ -65,5 +65,6 @@ func (obj *uninstaller) awaitDeletion(ctx context.Context, name string) error {
 			}
 		}
 	}
+	
 	return errors.New("failed to confirm package deletion")
 }
